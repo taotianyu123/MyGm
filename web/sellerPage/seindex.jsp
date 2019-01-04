@@ -60,7 +60,7 @@
                 <li class="layui-nav-item">
                     <a class="layui-icon" href="javascript:;" style="color:#9FC105">&#xe66e;&nbsp;&nbsp;订单管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a target="iframe_context" href="javascript:;">查询订单详情</a></dd>
+                        <dd><a target="iframe_context" href="dose?action=queryord&seid=${sessionScope.Seller.id}&pageNumber=1">查询订单详情</a></dd>
                     </dl>
                 </li>
                 <%--<li class="layui-nav-item">--%>

@@ -38,7 +38,7 @@
 </head>
 <body>
     <div class="personWarp">
-        <form action="doadmin?action=addgods" method="post">
+        <form action="doadmin?action=addgods" method="post" enctype="multipart/form-data">
             <label id="ts"></label>
             <label>商品名称:</label>
             <input id="godsName" type="text" name="godsName"  /><br/>
@@ -50,6 +50,7 @@
             <input type="text" name="goodsMoney"   /><br>
             <label>数量:</label>
             <input type="text" name="goodsNumber"   />&nbsp;&nbsp;&nbsp;
+            <input type="file" name="userImage"/><br/>
             <label>运费:</label>
             <input type="text" name="goodsCarriage"  /><br>
             <label>类型:</label>
@@ -100,39 +101,7 @@
             })
         });
 
-        $("#godsName").blur(function () {
-            var godname=$(this).val().trim();
-            var sellerid=$("#sellerName").val().trim();
-            var url = "doadmin";
-            var parameterData = "action=pdname&godname="+godname+"&sellerid="+sellerid;
-            $getJSON(url,parameterData,function (i) {
-                if (i>0){
-                    $("#ts").html("此商品已有!").cos("color","red");
-                    $("#tj").prop("disabled",true);
-                }else{
-                    $("#ts").html("暂无此商品!").cos("color","red");
-                    $("#tj").prop("disabled",false);
-                }
 
-            },"json")
-        })
-        $("#sellerName").blur(function () {
-            var godname=$("#godsName").val().trim();
-            var sellerid=$(this).val();
-            var url = "doadmin";
-            var parameterData = "action=pdname&godname="+godname+"&sellerid="+sellerid;
-            $getJSON(url,parameterData,function (i) {
-                if (i>0){
-                    $("#ts").html("此商品已有!").cos("color","red");
-                    $("#tj").prop("disabled",true);
-                }else{
-                    $("#ts").html("暂无此商品!").cos("color","red");
-                    $("#tj").prop("disabled",false);
-                }
-
-            },"json")
-
-        })
     </script>
 
 </body>

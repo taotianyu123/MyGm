@@ -55,7 +55,7 @@
                         <td>${cus.cusCode}</td>
                         <td>${cus.cusBirthday}</td>
                         <td>${cus.cusPassword}</td>
-                        <td><img class="layui-nav-img" width="36px" src="${cus.cusPhoto}"></td>
+                        <td><img class="layui-nav-img" width="36px" src="customerImage/${cus.cusPhoto}"></td>
                         <td><a class="layui-btn layui-btn-sm" href="doadmin?action=delById&cusid=${cus.id}">删除</a></td>
                         <td><a class="layui-btn layui-btn-sm" href="doadmin?action=queryBycusId&cusid=${cus.id}">修改</a></td>
 

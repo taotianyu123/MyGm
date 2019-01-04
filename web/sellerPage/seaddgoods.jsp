@@ -38,7 +38,7 @@
 </head>
 <body>
     <div class="personWarp">
-        <form action="doadmin?action=addgods" method="post">
+        <form action="dose?action=addgods" method="post" enctype="multipart/form-data">
             <label id="ts"></label>
             <label>商品名称:</label>
             <input id="godsName" type="text" name="godsName"  /><br/>
