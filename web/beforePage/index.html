@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <base href="http://localhost:8080/"/>
+    <script src="static/js/jquery-1.8.2.min.js"></script>
+    <style>
+        .main{
+            width: 900px;
+            height: 700px;
+            margin: auto;
+            margin-top: 40px;
+            border: 1px solid red;
+
+            padding: 30px;
+        }
+    </style>
+    <script>
+        var stuJSONObject;
+        var jsonObj = {
+            stuName1:"锅里",
+            stuSex1:"男"
+        }
+        $(function(){
+            var url = "doStu?action=getLoginStu";
+            $.post(url,function(data){
+                //将获取的对象存储到变量中
+                stuJSONObject = data;
+                $("#stuName").html(stuJSONObject.stuName).css("color","red");
+            },"json");
+
+            $("#myInfo").click(function () {
+                $(".stuName").html(stuJSONObject.stuName);
+                $(".stuBirthday").html(stuJSONObject.stuBirthday);
+                $(".stuId").html(stuJSONObject.stuId);
+
+            });
+
+            $("#myScore").click(function(){
+                $.ajax({
+                    url:"doStu",
+                    dataType:"JSON",
+                    type:"post",
+                    data:"action=queryByIdScore&stuId="+stuJSONObject.stuId,
+                    success:function(Data){
+                        $(".main").empty();
+                        //[{"course":{"couId":0,"couName":"微机原理","couTeaId":0},"score":{"scCouId":0,"scStuId":0,"score":90.0},"stuId":2018001,"stuName":"王菲"},{"course":{"couId":0,"couName":"计算机网络原理","couTeaId":0},"score":{"scCouId":0,"scStuId":0,"score":60.0},"stuId":2018001,"stuName":"王菲"},{"course":{"couId":0,"couName":"Java高级编程语言","couTeaId":0},"score":{"scCouId":0,"scStuId":0,"score":82.0},"stuId":2018001,"stuName":"王菲"},{"course":{"couId":0,"couName":"JavaScript高级编程语言","couTeaId":0},"score":{"scCouId":0,"scStuId":0,"score":59.0},"stuId":2018001,"stuName":"王菲"}]
+                      /* for(var i=0;i<Data.length;i++){
+                           $(".main").append("<b>"+
+                               Data[i].stuName
+                               +"</b>&nbsp;&nbsp;<b>"+
+                               Data[i].stuId
+                               +"</b>&nbsp;&nbsp;<b>"+
+                               Data[i].score.score
+                               +"</b>&nbsp;&nbsp;<b>"+
+                               Data[i].course.couName
+                               +"</b><br>");
+                       }*/
+                      $.each(Data,function (index,value) {
+                          $(".main").append("<b>"+
+                              value.stuName
+                              +"</b>&nbsp;&nbsp;<b>"+
+                              value.stuId
+                              +"</b>&nbsp;&nbsp;<b>"+
+                              value.score.score
+                              +"</b>&nbsp;&nbsp;<b>"+
+                              value.course.couName
+                              +"</b><br>");
+
+                      });
+                    },
+                    error:function(){
+                        alert("请求失败！")
+                    }
+                });
+            });
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+<b>欢迎<label id="stuName"></label></b>
+<ul>
+    <li>
+        <a id="myScore">查询成绩</a>
+    </li>
+    <li> <a>我的选修科</a></li>
+    <li> <a id="myInfo">我的个人资料</a></li>
+</ul>
+
+<div class="main">
+    姓名:<b class="stuName"></b><br>
+    生日:<b class="stuBirthday"></b><br>
+    学号:<b class="stuId"></b><br>
+</div>
+
+</body>
+</html>

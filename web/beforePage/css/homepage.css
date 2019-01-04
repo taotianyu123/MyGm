@@ -1,0 +1,87 @@
+
+
+
+        #ad_a{
+            position:absolute;
+            margin-top: -30px;
+            margin-left: 60px;
+
+        }
+        #ad_a a{
+            font-size: 20px;
+            background-color: darkgrey;
+        }
+
+        #b2d2{
+            margin-top: 2px;
+            margin-left: 3px;
+            width: 524px;
+            height:190px;
+
+        }
+        .ad_a1{
+            width: 20px;
+            height:20px;
+            float: left;
+            text-align: center;
+            margin-left: 10px;
+            background-color: darkgrey;
+        }
+
+        .selbd{
+            width: 70px;
+            margin-top: 9px;
+
+        }
+        #selbd_1{
+            width: 150px;
+            height: 70px;
+            margin-left: 34px;
+            margin-top: 15px
+
+        }
+        #selbd_2{
+            width: 150px;
+            height: 70px;
+            margin-left: 34px;
+            margin-top: 15px
+			
+			
+
+        }
+
+        #b3congzhi2{
+            width: 230px;
+            height: 150px;
+            
+           
+
+
+        }
+        #b3congzhi{
+            display:none;
+            width: 230px;
+            height: 150px;
+
+        }
+        
+	    #class_1_small,#class_2_small,#class_3_small,#class_4_small{
+			width:192px;
+			height:120px;
+			margin:5px 0 0 4px;
+		}
+		#class_1_small div a,#class_2_small div a,#class_3_small div a,#class_4_small div a{
+			
+			font-size: 11px;
+		}
+		#class_1_small div,#class_2_small div,#class_3_small div,#class_4_small div{
+			width:62px;
+			height:23px;
+			margin-left:2px;
+			float: left; 
+			
+		}
+		#class_1_big,#class_2_big,#class_3_big,#class_4_big{
+			margin-left:5px;
+			
+		}

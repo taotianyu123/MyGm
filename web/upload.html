@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    文件上传的条件:
+        表单设置
+            method="post"
+            enctype="multipart/form-data"  上传文件必须 表单中的数据不进行编码
+    <script>
+        function checkImage(val) {
+            var type = val.substring(val.lastIndexOf(".")+1);
+            var types = new Array("gif","bmp","jpg","png");
+            var status = false;
+            for(var i=0;i<types.length;i++){
+                if(type.toLowerCase()==types[i]){
+                    status = true;
+                    break;
+                }
+            }
+            if(!status){
+                alert("上传文件类型不是图像！");
+                document.getElementById("sub").disabled=true;
+            }else{
+                document.getElementById("sub").disabled=false;
+            }
+        }
+    </script>
+    <form action="doStu?action=upload" method="post" enctype="multipart/form-data">
+        <input type="text" name="userName"/>
+        <input type="checkbox" name="userHobby" value="琴"/>琴
+        <input type="checkbox" name="userHobby" value="棋"/>棋
+        <input type="checkbox" name="userHobby" value="书"/>书
+        <input type="file" name="userImage" onchange="checkImage(this.value)"/><br>
+        <input id="sub"  type="submit" value="注册"/>
+    </form>
+</body>
+</html>

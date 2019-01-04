@@ -1,0 +1,136 @@
+	/* 右边导航的标签样式 */
+	.panel-title {
+		font-size:16px;
+		line-height:30px;
+		text-align:center;
+		
+	}
+	
+	/* 右边导航的标签内背景 */
+	.easyui-accordion,.zaccordion{
+		background-image: url("../images/implimage/star2.jpg");
+	}
+	
+	/* 右边导航的标签字体标签大小决定了选中时的面积 */
+	.panel-title {
+		width:283px;
+		height:38px;
+	}
+
+	/* 右边导航的标签选中状态背景色 */
+	.accordion .accordion-header-selected {
+		background-color:#FED137;
+		
+	}
+	/* 右边导航的标签选中状态字体颜色 */
+	.accordion .accordion-header-selected .panel-title{
+		color:#000;
+	}
+	/* 右边导航的子标签样式 */
+	.panel-tag {
+		height:42px;
+		font-size:14px;
+		line-height:40px;
+		text-align:center;
+		background-color: #FF8800;
+		border:solid 1px;
+		opacity:0.6;
+	}
+	/* 右边导航的标签大小 */
+	.panel-header {
+		height:32px;
+		
+	}
+	/* 导航子标签的新增字样 */
+	.addF{
+		float:right;
+		margin-right:10px;
+	}
+	/* 导航小标答内小箭头图标*/
+	.JT {
+		float:left;
+		width:16px;
+		height:16px;
+		background-image: url('../images/implimage/bg.png');
+		background-position: -233px -83px;
+		margin:13px 0 0 10px;
+		
+	}
+	/* 头部框架 logo样式 */
+	#head {
+		background-color: #817865;
+		height:100px;
+		background-image: url('../images/implimage/logo.jpg');
+		background-repeat: no-repeat;
+		background-position: -65px 0;
+	}
+	/* 头部标签欢迎语句 */
+	#head h4 {
+		float:right;
+		line-height: 30px;
+		margin:57px 10px 0 0;
+		font-size: 14px;
+		color:#FFF;
+	}
+
+	/* 脚部框架 样式 */
+	#foot {
+		height:50px;
+		padding:10px;
+		background-color: #817865;
+	}
+	/* 退出按钮 */
+	#out{
+ 		margin-top:59px;
+ 		float: right; 
+ 		width:65px; 
+ 		margin-right:20px;
+ 	}
+
+ 	/* 欢迎登录 */
+ 	h1 {
+		font-size: 20px;
+	}
+	/* 登录框 通用居中*/
+	#login {
+		opacity: 1; 
+		width:510px;
+		height:330px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-top:-165px;
+		margin-left:-255px;
+		background-image: url("../images/implimage/login2.PNG");"
+	}
+	
+	/* 半透明的遮罩层 */
+	#overlay {
+		background-color: #000;
+		filter: alpha(opacity=50);  /*IE的透明度 */
+		opacity: 0.8;   /*透明度 */
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 100; /* 此处的图层要大于页面 */
+		display:block;
+		
+	}
+	/* 登录账号框 */
+	#supName {
+		background-color:transparent;
+		border:0px;
+		width:200px;
+		height:30px;
+		margin:138px 0 0 30px;
+	}
+	 /* 登录密码框 */
+	#supPwd {
+		background-color:transparent;
+		border:0px;
+		width:200px;
+		height:30px;
+		margin:25px 0 25px 30px;
+	}
