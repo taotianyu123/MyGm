@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="MyGm:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/MyGm_war_exploded</output-path>
+  <artifact type="exploded-war" name="MyGm:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyGm_Web_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="MyGm/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -8,11 +8,11 @@
           <element id="module-output" name="MyGm" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.46" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
-          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.46" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.6" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.54" />
         </element>
       </element>

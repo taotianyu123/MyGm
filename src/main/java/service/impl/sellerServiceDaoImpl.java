@@ -5,7 +5,6 @@ import pojo.ExtGoods;
 import pojo.Goods;
 import pojo.Page;
 import pojo.Seller;
-import service.sellerServiceDao;
 
 import java.util.List;
 

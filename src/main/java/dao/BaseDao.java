@@ -9,9 +9,9 @@ import java.sql.*;
  * @Version 1.0
  */
 public class BaseDao {
-    private static final String url = "jdbc:mysql://localhost:3306/guimeidb?useUnicode=true&characterEncoding=utf-8";
+    private static final String url = "jdbc:mysql://localhost:3306/gmdb?useUnicode=true&characterEncoding=utf-8";
     private static final String user = "root";
-    private static final String pwd = "tty";
+    private static final String pwd = "root";
     private static Connection conn = null;
     private static PreparedStatement psmt = null;
     private static Statement stmt = null;
